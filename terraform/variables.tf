@@ -2,10 +2,6 @@ variable "region" {
   default = "us-east-2"
 }
 
-variable "instance_type" {
-  default = "t2.micro"
-}
-
-variable "key_name" {
-  description = "AWS EC2 Key Pair Name"
+variable "cluster_name" {
+  default = "django-eks-cluster"
 }

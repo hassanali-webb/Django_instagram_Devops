@@ -6,10 +6,6 @@ apt install -y docker.io
 systemctl start docker
 systemctl enable docker
 
-# pull your docker image
 docker pull hassanali1824/instagram_clone:latest
 
-# run container
 docker run -d -p 8000:8000 hassanali1824/instagram_clone:latest
-
-

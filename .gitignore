@@ -96,3 +96,81 @@ static/posts/
 db.sqlite3
 media/
 style.css.map
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+_override.tf
+_override.tf.json
+.terraform.lock.hcl
+# -----------------------------
+# Terraform
+# -----------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# -----------------------------
+# Terraform Variables / Secrets
+# -----------------------------
+*.tfvars
+*.tfvars.json
+secrets.tfvars
+
+# -----------------------------
+# Plan files
+# -----------------------------
+*.tfplan
+
+# -----------------------------
+# Backend config (if sensitive)
+# -----------------------------
+backend.tf
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+
+# -----------------------------
+# OS files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# IDE / Editor
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# Node (if MERN project included)
+# -----------------------------
+node_modules/
+npm-debug.log*
+
+# -----------------------------
+# Python (if scripts used)
+# -----------------------------
+__pycache__/
+*.pyc
+
+# -----------------------------
+# Env files (IMPORTANT)
+# -----------------------------
+.env
+.env.*

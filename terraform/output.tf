@@ -1,3 +1,7 @@
-output "public_ip" {
-  value = aws_instance.django_app.public_ip
+output "cluster_name" {
+  value = module.eks.cluster_name
+}
+
+output "cluster_endpoint" {
+  value = module.eks.cluster_endpoint
 }
