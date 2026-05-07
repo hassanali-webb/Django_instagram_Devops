@@ -1,22 +1,20 @@
-FROM python:3.9-slim
+FROM python:3.6-slim
 
 WORKDIR /app
-
 
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpq-dev \
     netcat-openbsd \
+    zlib1g-dev \
+    libjpeg62-turbo-dev \
     && rm -rf /var/lib/apt/lists/*
 
-
 COPY requirements.txt .
-
 
 RUN pip install --upgrade pip \
     && pip install "setuptools<60" "wheel<0.38" \
     && pip install -r requirements.txt
-
 
 COPY . .
 
