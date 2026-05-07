@@ -27,7 +27,7 @@ spec:
 
       containers:
         - name: my-app
-          image: hassanali1824/instagram_clone:v1
+          image: hassanali1824/instagram_clone:v2
           imagePullPolicy: IfNotPresent
 
           ports:

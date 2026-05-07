@@ -21,8 +21,6 @@ def index(request):
     if not request.user.is_authenticated():
         redirect('login')
 
-    # Only return posts from users that are being followed, test this later
-    # for performance / improvement
     users_followed = request.user.userprofile.following.all()
     posts = IGPost.objects.filter(
                 user_profile__in=users_followed).order_by('-posted_on')
@@ -239,8 +237,7 @@ def post(request, pk):
 
 
 def likes(request, pk):
-    #likes = IGPost.objects.get(pk=pk).like_set.all()
-    #profiles = [like.user.userprofile for like in likes]
+
 
     post = IGPost.objects.get(pk=pk)
     profiles = Like.objects.filter(post=post)

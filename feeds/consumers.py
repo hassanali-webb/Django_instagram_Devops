@@ -7,11 +7,7 @@ from channels.auth import http_session_user, channel_session_user, channel_sessi
 from .models import Room, Message
 import json
 
-"""
-@channel_session, provides message.chanel_session
-"""
 
-# Connected to websocket.connect
 @channel_session_user_from_http
 def ws_connect(message):
     path = message.content['path']
@@ -22,7 +18,7 @@ def ws_connect(message):
     message.channel_session['room'] = room.label
 
 
-# Connected to websocket.receive
+
 @channel_session_user
 def ws_receive(message):
     path = message.content['path']
@@ -42,7 +38,7 @@ def ws_receive(message):
     Group('chat-'+ room_label).send({'text': json.dumps(context) })
 
 
-# Connected to websocket.disconnect
+
 @channel_session_user
 def ws_disconnect(message):
     label = message.channel_session['room']

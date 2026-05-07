@@ -43,7 +43,6 @@ class IGPost(models.Model):
     user_profile = models.ForeignKey(UserProfile, null=True, blank=True)
     title = models.CharField(max_length=100)
     image = ProcessedImageField(upload_to='posts',
-                                #processors=[ResizeToFill(200,200)],
                                 format='JPEG',
                                 options={ 'quality': 100})
     posted_on = models.DateTimeField(default=datetime.now)
